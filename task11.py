@@ -4,7 +4,7 @@ import turtle
 # 1-Logic
 
 def expand_lsystem(axiom, rules_dict, iterations):
-    """Replaces letters in the string based on rules."""
+    #Replaces letters in the string based on rules.
     current_string = axiom
     for _ in range(iterations):
         next_string = ""
@@ -15,7 +15,7 @@ def expand_lsystem(axiom, rules_dict, iterations):
     return current_string
 
 def parse_rules(raw_rules):
-    """Converts 'F:F+F,X:FF' into {'F': 'F+F', 'X': 'FF'}."""
+    #Converts 'F:F+F,X:FF' into {'F': 'F+F', 'X': 'FF'}.
     rules_dict = {}
     if not raw_rules.strip():
         return rules_dict
@@ -29,7 +29,7 @@ def parse_rules(raw_rules):
 # 2-Drawing
 
 def draw_lsystem(instructions, angle, t_obj, screen_obj):
-    """Interprets the string into turtle movements with a stack."""
+    #Interprets the string into turtle movements with a stack.
     t_obj.clear()
     t_obj.penup()
     t_obj.home()
