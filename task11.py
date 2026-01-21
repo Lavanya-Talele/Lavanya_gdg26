@@ -42,7 +42,7 @@ def draw_lsystem(instructions, angle, t_obj, screen_obj):
     screen_obj.tracer(0, 0) # Instant drawing mode
     
     for i, cmd in enumerate(instructions):
-        # Brownie Point: Color Gradient based on progress (Blue to Green)
+        #Color Gradient based on progress (Blue to Green)
         ratio = i / len(instructions)
         t_obj.pencolor(0, int(255 * ratio), int(255 * (1 - ratio)))
 
